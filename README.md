@@ -1,31 +1,60 @@
-# Vue 3 Task Manager
+# vue-project
 
-A beginner-friendly task management application built with Vue 3 and Tailwind CSS. Perfect for learning modern web development practices.
+This template should help get you started developing with Vue 3 in Vite.
 
-![Application Screenshot](./public/crud.png)
+## Recommended IDE Setup
 
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
 
-## 🚀 Live Demo
+## Customize configuration
 
-Try it out: [Live Demo](https://vue3-tailwind-todo.vercel.app/)
+See [Vite Configuration Reference](https://vite.dev/config/).
 
-## 🛠️ Built With
+## Project Setup
 
-- Vue 3 (JavaScript Framework)
-- Tailwind CSS (Styling)
-- TypeScript (Type Safety)
-- Vue Router (Navigation)
-- State Management
-- Vite (Build Tool)
+```sh
+pnpm install
+```
 
-## 📋 Prerequisites
+### Compile and Hot-Reload for Development
 
-Before you begin, ensure you have installed:
-- Node.js (version 16 or higher)
-- npm (comes with Node.js)
-- Git
+```sh
+pnpm dev
+```
 
-## 🎯 Getting Started
+### Type-Check, Compile and Minify for Production
 
-1. Clone the project:
+```sh
+pnpm build
+```
 
+### Run Unit Tests with [Vitest](https://vitest.dev/)
+
+```sh
+pnpm test:unit
+```
+
+### Run End-to-End Tests with [Playwright](https://playwright.dev)
+
+```sh
+# Install browsers for the first run
+npx playwright install
+
+# When testing on CI, must build the project first
+pnpm build
+
+# Runs the end-to-end tests
+pnpm test:e2e
+# Runs the tests only on Chromium
+pnpm test:e2e --project=chromium
+# Runs the tests of a specific file
+pnpm test:e2e tests/example.spec.ts
+# Runs the tests in debug mode
+pnpm test:e2e --debug
+```
+
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+pnpm lint
+```
